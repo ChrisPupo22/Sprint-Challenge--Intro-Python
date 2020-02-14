@@ -24,7 +24,7 @@ humans = [
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with 'D':
 print("Starts with D:")
-a = [human for human in humans if human.name[0] == 'D']
+a = [human.name for human in humans if human.name[0] == 'D']
 # for x in humans: 
 #     if x.name[0] == 'D':
 #         a.append(x)
@@ -33,7 +33,7 @@ print(a)
 # Write a list comprehension that creates a list of names of everyone
 # whose name ends in "e".
 print("Ends with e:")
-b = [human for human in humans if human.name[-1] == 'e']
+b = [human.name for human in humans if human.name[-1] == 'e']
 # for x in humans: 
 #     if x.name[-1] == 'e':
 #         b.append(x)
@@ -42,7 +42,7 @@ print(b)
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with any letter between 'C' and 'G' inclusive.
 print("Starts between C and G, inclusive:")
-c = [human for human in humans if human.name[0] == 'C' or human.name[0] == 'D' or human.name[0] == 'E' or human.name[0] == 'F' or human.name[0] == 'G']
+c = [human.name for human in humans if human.name[0] == 'C' or human.name[0] == 'D' or human.name[0] == 'E' or human.name[0] == 'F' or human.name[0] == 'G']
 # letters = ["C", "D", "E", "F", "G"]
 
 print(c)
@@ -64,7 +64,7 @@ print(e)
 # inclusive.
 print("Names and ages between 27 and 32:")
 # f = [human.name + ': ' +'human.age' for human in humans if human.age == ]
-f = [human.name + str(human.age) for human in humans if human.age == 27 or human.age ==28 or human.age ==29 or human.age == 30 or human.age == 31 or human.age == 32]
+f = [(human.name, str(human.age)) for human in humans if human.age == 27 or human.age ==28 or human.age ==29 or human.age == 30 or human.age == 31 or human.age == 32]
 print(f)
 
 # Write a list comprehension that creates a list of new Humans like the old
@@ -77,5 +77,5 @@ print(g)
 # Write a list comprehension that contains the square root of all the ages.
 print("Square root of ages:")
 import math
-h = [human.age**2 for human in humans]
+h = [human.age**(1/2) for human in humans]
 print(h)
