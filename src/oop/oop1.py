@@ -25,17 +25,23 @@ class Vehicle:
     def __init__(self):
         pass
 
-class Car(Vehicle):
+class GroundVehicle(Vehicle): 
     def __init__(self):
-                    pass
+        super().__init__()
+        pass
 
-class Motorcycle(Vehicle):
+class Car(GroundVehicle):
     def __init__(self):
-                    pass
+        pass
+
+class Motorcycle(GroundVehicle):
+    def __init__(self):
+        pass
 
 #Base class of Airplane
-class FlightVehicle:
+class FlightVehicle(Vehicle): 
     def __init__(self):
+        super().__init__()
         pass
 
 class Airplane(FlightVehicle):
@@ -43,7 +49,8 @@ class Airplane(FlightVehicle):
         pass
 
 #This is a Base class as well
-class Starship: 
+class Starship():
     def __init__(self):
+        super().__init__()
         pass
 
